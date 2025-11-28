@@ -1,0 +1,79 @@
+import os
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from config import USUARIO, SENHA, ARQUIVO_XML
+
+def atualizar_agenda(ips):
+    """Exclui e importa agenda XML em cada IP fornecido"""
+    chrome_options = Options()
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_argument("--allow-insecure-localhost")
+
+    for ip in ips:
+        print(f"\n🔹 Processando IP {ip}...")
+        driver = webdriver.Chrome(options=chrome_options)
+        wait = WebDriverWait(driver, 30)  # tempo maior para carregar a página
+        url = f"https://{USUARIO}:{SENHA}@{ip}/_index.html#/contacts"
+        driver.get(url)
+
+        # Aguarda a tabela aparecer
+        wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "table tr")))
+
+        # Espera todos os checkboxes carregarem
+        timeout = time.time() + 30  # 30 segundos de espera máxima
+        checkboxes = []
+        while time.time() < timeout:
+            checkboxes = driver.find_elements(By.CSS_SELECTOR, "input[type='checkbox']")
+            if checkboxes and all(cb.is_displayed() for cb in checkboxes):
+                break
+            time.sleep(1)
+        else:
+            print(f"❌ Timeout: checkboxes não carregaram para {ip}")
+            driver.quit()
+            continue
+
+        # Seleciona todos os checkboxes
+        for cb in checkboxes:
+            try:
+                driver.execute_script("arguments[0].scrollIntoView(true);", cb)
+                if not cb.is_selected():
+                    cb.click()
+            except Exception as e:
+                print(f"Erro ao clicar checkbox: {e}")
+
+        # Verifica se todos foram selecionados antes de deletar
+        checkboxes = driver.find_elements(By.CSS_SELECTOR, "input[type='checkbox']")
+        if not all(cb.is_selected() for cb in checkboxes):
+            print(f"❌ Nem todos os contatos foram selecionados em {ip}, pulando exclusão")
+            driver.quit()
+            continue
+
+        # Clica em deletar
+        driver.find_element(By.ID, "delete_button").click()
+        try:
+            alert = wait.until(EC.alert_is_present())
+            print("Texto do popup:", alert.text)
+            alert.accept()
+        except:
+            print("Nenhum popup apareceu")
+        print("✔ Todos os contatos foram excluídos")
+
+        # Importa XML
+        aba_importar = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[text()='Importar']")))
+        aba_importar.click()
+        input_file = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "input[type='file']")))
+        input_file.send_keys(os.path.abspath(ARQUIVO_XML))
+        btn_atualizar = wait.until(
+            EC.element_to_be_clickable((By.XPATH, "//button[text()='Atualizar'] | //input[@value='Atualizar']"))
+        )
+        btn_atualizar.click()
+        print(f"✔ Nova agenda enviada com sucesso para {ip}")
+        time.sleep(5)
+        driver.quit()
+
+    print("\n🚀 Processo concluído para todos os IPs!")

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contactData>
+	<group>
+		<contact sOfficeNumber="5111" sRing="1" sDisplayName="Valdir Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5112" sRing="1" sDisplayName="Portaria" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5113" sRing="1" sDisplayName="Lucas Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5114" sRing="1" sDisplayName="Armazem" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5115" sRing="1" sDisplayName="Andreia Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5116" sRing="1" sDisplayName="Tiago Silva" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5126" sRing="1" sDisplayName="Victor Papa" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5118" sRing="1" sDisplayName="Valter Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5119" sRing="1" sDisplayName="Ananias Santos" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5120" sRing="1" sDisplayName="Sala Reuni&#195;&#163;o" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5121" sRing="1" sDisplayName="Luana Nolli" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5130" sRing="1" sDisplayName="Marcos Viana" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5132" sRing="1" sDisplayName="Joana Souza" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5139" sRing="1" sDisplayName="Thiago Lima" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5143" sRing="1" sDisplayName="Guilherme Martinelli" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5147" sRing="1" sDisplayName="Comercial" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5150" sRing="1" sDisplayName="Tania Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5151" sRing="1" sDisplayName="Alvaro Goncalves" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5152" sRing="1" sDisplayName="Valquiria Ribeiro" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5155" sRing="1" sDisplayName="Sthefany Rodrigues" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5157" sRing="1" sDisplayName="Cristina Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5162" sRing="1" sDisplayName="Edson Araujo" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5167" sRing="1" sDisplayName="Nilva Guimar&#195;&#163;es" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5171" sRing="1" sDisplayName="Silvia Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5175" sRing="1" sDisplayName="Tatiana Santos" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5176" sRing="1" sDisplayName="Ana Cristina" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5177" sRing="1" sDisplayName="Thays Boscatto" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5179" sRing="1" sDisplayName="Gisele Croce" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5140" sRing="1" sDisplayName="Santo Andre" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5122" sRing="1" sDisplayName="Nathalia Bernardo" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5123" sRing="1" sDisplayName="Anderson Bonfim" sAccount="0" sIcon="Person" />
+		<contact sOfficeNumber="5124" sRing="1" sDisplayName="Matheus Lima" sAccount="0" sIcon="Person" />
+	</group>
+	<blacklist />
+</contactData>
