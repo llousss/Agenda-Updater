@@ -1,8 +1,0 @@
-# Configurações gerais
-ANGRY_PATH = r"C:\Program Files\Angry IP Scanner\ipscan.exe"
-SAIDA_CSV = r"C:\Users\matheus.lima_valnilo\Desktop\agenda teste\resultado.csv"
-ARQUIVO_XML = r"C:\Users\matheus.lima_valnilo\Downloads\ContactData.xml"
-USUARIO = "admin"
-SENHA = "admin"
-IP_RANGE_START = "192.168.2.1"
-IP_RANGE_END = "192.168.2.254"
