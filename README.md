@@ -3,7 +3,6 @@
 **Automatic Network Scanner & Corporate Phonebook Updater**
 
 [![Status](https://img.shields.io/badge/status-active-brightgreen)]()
-[![License](https://img.shields.io/badge/license-MIT-blue)]()
 [![Python](https://img.shields.io/badge/python-3.x-yellow)]()
 
 Agenda-Updater is a tool designed to automatically scan your local network for IP phones and update their internal contact directory (phonebook).
